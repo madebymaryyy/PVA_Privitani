@@ -8,6 +8,7 @@ namespace Firsttask_Marat
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.DarkCyan;
+
             Console.WriteLine("Napište kolik je teď hodin (například: 12): ");
             Console.WriteLine("POZOR: Nepište desetinné číslo, to ukončí program!\n");
             int time;
@@ -17,11 +18,11 @@ namespace Firsttask_Marat
             string name;
             name = Console.ReadLine( );
 
-            if (time < 12)
+            if (time < 12 && time >= 0)
             {
                 Console.Clear();
                 Console.WriteLine("\nDobré ráno, ti přeji " +  name);
-                Console.WriteLine("\nNyní je: " + time + "hodin.");
+                Console.WriteLine("\nNyní je: " + time + "   hodin.");
             }
 
             else if (time >= 12 && time < 18)
@@ -41,7 +42,7 @@ namespace Firsttask_Marat
             else
             {
                 Console.Clear();
-                Console.WriteLine("Chyba!" + name + " , zkontrolujte prosím, zda jste zadali číslo od 0 do 24!");
+                Console.WriteLine("Chyba! " + name + " , zkontrolujte prosím, zda jste zadali číslo od 0 do 24!");
                 Console.WriteLine("Také prosím zkontrolujte zda jste zadali !JENOM! číslo a nenapsali jste omylem slovo hodin nebo tečku.");
             }
 
